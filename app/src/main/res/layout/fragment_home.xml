@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/AppNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_home_app_name"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/create_game_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_home_create_game"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <Button
+        android:id="@+id/connect_game_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fragment_home_connect_game"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/create_game_btn"
+        app:layout_constraintStart_toStartOf="@+id/create_game_btn"
+        app:layout_constraintTop_toBottomOf="@+id/create_game_btn" />
+
+    <Button
+        android:id="@+id/rules_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fragment_home_rules"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/connect_game_btn"
+        app:layout_constraintStart_toStartOf="@+id/connect_game_btn"
+        app:layout_constraintTop_toBottomOf="@+id/connect_game_btn" />
+
+    <Button
+        android:id="@+id/settings_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fragment_home_settings"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/rules_btn"
+        app:layout_constraintStart_toStartOf="@+id/rules_btn"
+        app:layout_constraintTop_toBottomOf="@+id/rules_btn" />
+
+    <Button
+        android:id="@+id/authors_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_home_authors"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/settings_btn"
+        app:layout_constraintStart_toStartOf="@+id/settings_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

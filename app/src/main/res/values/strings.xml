@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HintHunt</string>
+
+    <string name="fragment_home_app_name">HintHunt</string>
+    <string name="fragment_home_create_game">Create game</string>
+    <string name="fragment_home_connect_game">Connect game</string>
+    <string name="fragment_home_rules">Rules</string>
+    <string name="fragment_home_settings">Settings</string>
+    <string name="fragment_home_authors">Authors</string>
 </resources>
