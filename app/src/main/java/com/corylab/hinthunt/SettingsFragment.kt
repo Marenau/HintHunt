@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.corylab.hinthunt.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -28,5 +29,29 @@ class SettingsFragment : Fragment() {
     }
 
     private fun init() {
+        binding.languageEnglish.setOnClickListener {
+            binding.languageRussian.isChecked= false
+            binding.languageEnglish.isChecked= true
+        }
+        binding.languageRussian.setOnClickListener {
+            binding.languageEnglish.isChecked = false
+            binding.languageRussian.isChecked= true
+        }
+
+        binding.systemSchemeChp.setOnClickListener {
+            binding.lightSchemeChp.isChecked= false
+            binding.darkSchemeChp.isChecked= false
+            binding.systemSchemeChp.isChecked = true
+        }
+        binding.lightSchemeChp.setOnClickListener {
+            binding.systemSchemeChp.isChecked = false
+            binding.darkSchemeChp.isChecked = false
+            binding.lightSchemeChp.isChecked = true
+        }
+        binding.darkSchemeChp.setOnClickListener {
+            binding.lightSchemeChp.isChecked = false
+            binding.systemSchemeChp.isChecked = false
+            binding.darkSchemeChp.isChecked = true
+        }
     }
 }

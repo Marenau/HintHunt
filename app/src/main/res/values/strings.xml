@@ -16,6 +16,24 @@
     <string name="fragment_settings_language">Language</string>
     <string name="fragment_settings_language_russian">Russian</string>
     <string name="fragment_settings_language_english">English</string>
+    <string name="fragment_settings_support_developers">Support developers</string>
+    <string name="fragment_create_game_title">Create game</string>
+    <string name="fragment_create_game_board_size">Game board size</string>
+    <string name="fragment_create_game_board_size_18">18</string>
+    <string name="fragment_create_game_board_size_21">21</string>
+    <string name="fragment_create_game_board_size_24">24</string>
+    <string name="fragment_create_game_сomplexity_of_words">Complexity of words</string>
+    <string name="fragment_create_game_colors_of_teams">Colors of teams</string>
+    <string name="fragment_create_game_wild_berries">Wild berries</string>
+    <string name="fragment_create_game_mustard_field">Мustard field</string>
+    <string name="fragment_create_game_сarrot_freshness">Carrot freshness</string>
+    <string name="fragment_create_game_noble_saffron">Noble Saffron</string>
+    <string name="fragment_create_game_lilac_at_midnight">Lilac at midnight</string>
+    <string name="fragment_create_game_сranberries_in_moss">Cranberries in moss</string>
+    <string name="fragment_create_game_create">Create</string>
+
+
+
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

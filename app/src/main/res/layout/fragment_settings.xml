@@ -45,57 +45,70 @@
                 android:text="@string/fragment_settings_color_scheme"
                 android:textSize="18sp" />
 
-            <com.google.android.material.chip.ChipGroup
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/chipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:selectionRequired="true"
-                app:singleLine="true"
-                app:singleSelection="true">
+                android:layout_marginEnd="8dp">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/system_scheme_chp"
                     style="@style/Chip"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
                     android:text="@string/fragment_settings_color_scheme_system_chip"
+                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
                     app:chipStartPadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/light_scheme_chp"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="81dp"
-                    tools:layout_editor_absoluteX="24dp"
-                    tools:layout_editor_absoluteY="133dp" />
+                    tools:layout_conversion_absoluteWidth="81dp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/light_scheme_chp"
                     style="@style/Chip"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
                     android:text="@string/fragment_settings_color_scheme_light_chip"
+                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
                     app:chipStartPadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/system_scheme_chp"
+                    app:layout_constraintEnd_toStartOf="@+id/dark_scheme_chp"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/system_scheme_chp"
+                    app:layout_constraintTop_toTopOf="@+id/system_scheme_chp"
                     tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="65dp"
-                    tools:layout_editor_absoluteX="113dp"
-                    tools:layout_editor_absoluteY="133dp" />
+                    tools:layout_conversion_absoluteWidth="65dp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/dark_scheme_chp"
                     style="@style/Chip"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
                     android:text="@string/fragment_settings_color_scheme_dark_chip"
+                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
                     app:chipStartPadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/light_scheme_chp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/light_scheme_chp"
+                    app:layout_constraintTop_toTopOf="@+id/light_scheme_chp"
                     tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    tools:layout_editor_absoluteX="186dp"
-                    tools:layout_editor_absoluteY="133dp" />
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
-            </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
@@ -107,7 +120,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,38 +141,60 @@
                 android:text="@string/fragment_settings_language"
                 android:textSize="18sp" />
 
-            <com.google.android.material.chip.ChipGroup
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:selectionRequired="true"
-                app:singleLine="true"
-                app:singleSelection="true">
+                android:layout_marginEnd="8dp">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/language_russian"
                     style="@style/Chip"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
                     android:text="@string/fragment_settings_language_russian"
+                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
-                    app:chipStartPadding="10dp" />
+                    app:chipStartPadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/language_english"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/language_english"
                     style="@style/Chip"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
                     android:text="@string/fragment_settings_language_english"
+                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
-                    app:chipStartPadding="10dp" />
+                    app:chipStartPadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/language_russian"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/language_russian"
+                    app:layout_constraintTop_toTopOf="@+id/language_russian" />
 
-            </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/support_developers_btn"
+        style="@style/ButtonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_settings_support_developers"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/language_cdv"
+        app:layout_constraintStart_toStartOf="@+id/language_cdv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
