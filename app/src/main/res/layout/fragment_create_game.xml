@@ -5,8 +5,7 @@
     style="@style/Background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@null"
-    android:paddingVertical="10dp">
+    android:backgroundTint="@null">
 
     <TextView
         android:id="@+id/title"
@@ -67,7 +66,7 @@
                     android:checkable="true"
                     android:text="@string/fragment_create_game_board_size_18"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/size_21_chp"
+                    app:layout_constraintEnd_toStartOf="@+id/size_21_btn"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -137,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/fragment_create_game_сomplexity_of_words"
+                android:text="@string/fragment_create_game_complexity_of_words"
                 android:textSize="18sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -153,44 +152,12 @@
                     style="@style/ButtonWithIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
                     android:checkable="true"
                     android:paddingVertical="5dp"
                     app:icon="@drawable/one_star"
                     app:iconTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/two_stars_btn"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    style ="@style/ButtonWithIcon"
-                    android:id="@+id/two_stars_btn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:paddingVertical="5dp"
-                    app:icon="@drawable/two_star"
-                    app:layout_constraintBottom_toBottomOf="@+id/one_star_btn"
-                    app:layout_constraintEnd_toStartOf="@+id/three_stars_btn"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/one_star_btn"
-                    app:layout_constraintTop_toTopOf="@+id/one_star_btn" />
-
-                <com.google.android.material.button.MaterialButton
-                    style ="@style/ButtonWithIcon"
-                    android:id="@+id/three_stars_btn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:paddingVertical="5dp"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="@+id/two_stars_btn"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/two_stars_btn"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -213,7 +180,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -224,8 +191,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/fragment_create_game_colors_of_teams"
-                android:textSize="18sp" />
-
+                android:textSize="18sp"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -238,16 +204,89 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/wild_berries_btn"
-                    android:layout_width="wrap_content"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/gradient_wild_berries"
-                    app:backgroundTint="#00FFFFFF"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="3dp"
+                    android:text="@string/fragment_create_game_wild_berries"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toStartOf="@+id/carrot_freshness_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mustard_field_btn"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/fragment_create_game_mustard_field"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/carrot_freshness_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/carrot_freshness_btn"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="@string/fragment_create_game_carrot_freshness"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toStartOf="@+id/mustard_field_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wild_berries_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/noble_saffron_btn"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="@string/fragment_create_game_noble_saffron"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/lilac_at_midnight_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wild_berries_btn" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/lilac_at_midnight_btn"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="@string/fragment_create_game_lilac_at_midnight"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cranberries_in_moss_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/noble_saffron_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/carrot_freshness_btn" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cranberries_in_moss_btn"
+                    style="@style/ButtonWithBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/fragment_create_game_cranberries_in_moss"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/lilac_at_midnight_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/mustard_field_btn" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

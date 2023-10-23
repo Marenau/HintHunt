@@ -55,18 +55,16 @@
                 android:layout_marginBottom="8dp">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/system_scheme_chp"
+                    android:id="@+id/system_scheme_btn"
                     style="@style/ButtonWithText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="3dp"
-                    android:checkable="true"
                     android:text="@string/fragment_settings_color_scheme_system_chip"
-                    android:textAlignment="center"
                     app:chipEndPadding="10dp"
                     app:chipStartPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/light_scheme_chp"
+                    app:layout_constraintEnd_toStartOf="@+id/light_scheme_btn"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -74,37 +72,33 @@
                     tools:layout_conversion_absoluteWidth="81dp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/light_scheme_chp"
+                    android:id="@+id/light_scheme_btn"
                     style="@style/ButtonWithText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginEnd="3dp"
-                    android:checkable="true"
                     android:text="@string/fragment_settings_color_scheme_light_chip"
-                    android:textAlignment="center"
-                    app:layout_constraintBottom_toBottomOf="@+id/system_scheme_chp"
-                    app:layout_constraintEnd_toStartOf="@+id/dark_scheme_chp"
+                    app:layout_constraintBottom_toBottomOf="@+id/system_scheme_btn"
+                    app:layout_constraintEnd_toStartOf="@+id/dark_scheme_btn"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/system_scheme_chp"
-                    app:layout_constraintTop_toTopOf="@+id/system_scheme_chp"
+                    app:layout_constraintStart_toEndOf="@+id/system_scheme_btn"
+                    app:layout_constraintTop_toTopOf="@+id/system_scheme_btn"
                     tools:layout_conversion_absoluteHeight="48dp"
                     tools:layout_conversion_absoluteWidth="65dp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/dark_scheme_chp"
+                    android:id="@+id/dark_scheme_btn"
                     style="@style/ButtonWithText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:checkable="true"
                     android:text="@string/fragment_settings_color_scheme_dark_chip"
-                    android:textAlignment="center"
-                    app:layout_constraintBottom_toBottomOf="@+id/light_scheme_chp"
+                    app:layout_constraintBottom_toBottomOf="@+id/light_scheme_btn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/light_scheme_chp"
-                    app:layout_constraintTop_toTopOf="@+id/light_scheme_chp"
+                    app:layout_constraintStart_toEndOf="@+id/light_scheme_btn"
+                    app:layout_constraintTop_toTopOf="@+id/light_scheme_btn"
                     tools:layout_conversion_absoluteHeight="48dp"
                     tools:layout_conversion_absoluteWidth="63dp" />
 
@@ -156,8 +150,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="3dp"
                     android:text="@string/fragment_settings_language_russian"
-                    android:textAlignment="center"
-                    android:checkable="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/language_english"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -171,8 +163,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:text="@string/fragment_settings_language_english"
-                    android:textAlignment="center"
-                    android:checkable="true"
                     app:layout_constraintBottom_toBottomOf="@+id/language_russian"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -184,6 +174,7 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/support_developers_btn"
         style="@style/ButtonText"

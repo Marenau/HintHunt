@@ -38,20 +38,20 @@ class SettingsFragment : Fragment() {
             binding.languageRussian.isChecked= true
         }
 
-        binding.systemSchemeChp.setOnClickListener {
-            binding.lightSchemeChp.isChecked= false
-            binding.darkSchemeChp.isChecked= false
-            binding.systemSchemeChp.isChecked = true
+        binding.systemSchemeBtn.setOnClickListener {
+            binding.lightSchemeBtn.isChecked= false
+            binding.systemSchemeBtn.isChecked= false
+            binding.darkSchemeBtn.isChecked = true
         }
-        binding.lightSchemeChp.setOnClickListener {
-            binding.systemSchemeChp.isChecked = false
-            binding.darkSchemeChp.isChecked = false
-            binding.lightSchemeChp.isChecked = true
+        binding.lightSchemeBtn.setOnClickListener {
+            binding.systemSchemeBtn.isChecked = false
+            binding.darkSchemeBtn.isChecked = false
+            binding.lightSchemeBtn.isChecked = true
         }
-        binding.darkSchemeChp.setOnClickListener {
-            binding.lightSchemeChp.isChecked = false
-            binding.systemSchemeChp.isChecked = false
-            binding.darkSchemeChp.isChecked = true
+        binding.darkSchemeBtn.setOnClickListener {
+            binding.lightSchemeBtn.isChecked = false
+            binding.systemSchemeBtn.isChecked = false
+            binding.darkSchemeBtn.isChecked = true
         }
 
     }
