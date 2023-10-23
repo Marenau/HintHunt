@@ -17,6 +17,7 @@
     <string name="fragment_settings_language_russian">Russian</string>
     <string name="fragment_settings_language_english">English</string>
     <string name="fragment_settings_support_developers">Support developers</string>
+
     <string name="fragment_create_game_title">Create game</string>
     <string name="fragment_create_game_board_size">Game board size</string>
     <string name="fragment_create_game_board_size_18">18</string>
