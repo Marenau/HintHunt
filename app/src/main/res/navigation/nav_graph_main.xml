@@ -21,11 +21,20 @@
         android:id="@+id/settingsFragment"
         android:name="com.corylab.hinthunt.SettingsFragment"
         android:label="SettingsFragment"
-        tools:layout="@layout/fragment_settings"/>
+        tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/createGameFragment"
         android:name="com.corylab.hinthunt.CreateGameFragment"
         android:label="CreateGameFragment"
-        tools:layout="@layout/fragment_create_game"/>
+        tools:layout="@layout/fragment_create_game">
+        <action
+            android:id="@+id/action_createGameFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.corylab.hinthunt.PlayerFragment"
+        android:label="PlayerFragment"
+        tools:layout="@layout/fragment_player" />
 
 </navigation>

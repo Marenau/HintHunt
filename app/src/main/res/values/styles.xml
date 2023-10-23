@@ -60,4 +60,18 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">4</item>
     </style>
+
+    <style name="ScoreButton">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/roboto_condensed_bold</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="BottomNavigation" parent="@style/Widget.Material3.BottomNavigationView">
+        <item name="itemBackground">@color/light_gray</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemRippleColor">@color/white</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+    </style>
 </resources>

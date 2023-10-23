@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/icon_info"
+        android:title="@string/fragment_player_menu_information" />
+    <item
+        android:icon="@drawable/icon_home"
+        android:title="@string/fragment_player_menu_home" />
+    <item
+        android:icon="@drawable/icon_turn"
+        android:title="@string/fragment_player_menu_turn" />
+</menu>

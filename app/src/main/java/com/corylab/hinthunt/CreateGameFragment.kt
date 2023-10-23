@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.corylab.hinthunt.databinding.FragmentCreateGameBinding
 import com.google.android.material.button.MaterialButton
 
@@ -140,6 +141,8 @@ class CreateGameFragment : Fragment() {
         }
 
         background = null
+
+        binding.createBtn.setOnClickListener { findNavController().navigate(R.id.action_createGameFragment_to_playerFragment) }
     }
 
     private fun createButtonBackground(firstColor: Int, secondColor: Int): GradientDrawable {

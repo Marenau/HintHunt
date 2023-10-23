@@ -35,4 +35,9 @@
     <string name="fragment_create_game_lilac_at_midnight">Lilac at midnight</string>
     <string name="fragment_create_game_cranberries_in_moss">Cranberries in moss</string>
     <string name="fragment_create_game_create">Create</string>
+
+    <string name="fragment_player_menu_information">Info</string>
+    <string name="fragment_player_menu_home">Home</string>
+    <string name="fragment_player_menu_turn">Turn</string>
+    <string name="fragment_player_turn">Turn</string>
 </resources>
