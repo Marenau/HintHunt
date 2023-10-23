@@ -53,5 +53,6 @@ class SettingsFragment : Fragment() {
             binding.systemSchemeChp.isChecked = false
             binding.darkSchemeChp.isChecked = true
         }
+
     }
 }

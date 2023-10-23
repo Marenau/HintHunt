@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.corylab.hinthunt.databinding.FragmentHomeBinding
+import com.corylab.hinthunt.databinding.FragmentCreateGameBinding
 
-class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
+class CreateGameFragment : Fragment() {
+    private var _binding: FragmentCreateGameBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,18 +16,17 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentCreateGameBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         init()
+
     }
 
     private fun init() {
-        binding.settingsBtn.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_settingsFragment) }
-        binding.createGameBtn.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_createGameFragment) }
+
     }
 }

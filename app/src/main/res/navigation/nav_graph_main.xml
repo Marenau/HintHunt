@@ -13,10 +13,19 @@
         <action
             android:id="@+id/action_homeFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createGameFragment"
+            app:destination="@id/createGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.corylab.hinthunt.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/createGameFragment"
+        android:name="com.corylab.hinthunt.CreateGameFragment"
+        android:label="CreateGameFragment"
+        tools:layout="@layout/fragment_create_game"/>
+
 </navigation>
