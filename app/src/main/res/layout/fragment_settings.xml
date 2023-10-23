@@ -61,8 +61,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="3dp"
                     android:text="@string/fragment_settings_color_scheme_system_chip"
-                    app:chipEndPadding="10dp"
-                    app:chipStartPadding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/light_scheme_btn"
                     app:layout_constraintHorizontal_bias="0.5"

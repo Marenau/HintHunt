@@ -31,27 +31,22 @@ class SettingsFragment : Fragment() {
     private fun init() {
         binding.languageEnglish.setOnClickListener {
             binding.languageRussian.isChecked= false
-            binding.languageEnglish.isChecked= true
         }
         binding.languageRussian.setOnClickListener {
             binding.languageEnglish.isChecked = false
-            binding.languageRussian.isChecked= true
         }
 
         binding.systemSchemeBtn.setOnClickListener {
             binding.lightSchemeBtn.isChecked= false
-            binding.systemSchemeBtn.isChecked= false
-            binding.darkSchemeBtn.isChecked = true
+            binding.darkSchemeBtn.isChecked = false
         }
         binding.lightSchemeBtn.setOnClickListener {
             binding.systemSchemeBtn.isChecked = false
             binding.darkSchemeBtn.isChecked = false
-            binding.lightSchemeBtn.isChecked = true
         }
         binding.darkSchemeBtn.setOnClickListener {
-            binding.lightSchemeBtn.isChecked = false
             binding.systemSchemeBtn.isChecked = false
-            binding.darkSchemeBtn.isChecked = true
+            binding.lightSchemeBtn.isChecked = false
         }
 
     }
