@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/icon_show_cards"
+        android:title="@string/fragment_leader_menu_show_cards" />
+    <item
+        android:icon="@drawable/icon_home"
+        android:title="@string/fragment_leader_menu_home" />
+    <item
+        android:icon="@drawable/icon_mix_cards"
+        android:title="@string/fragment_leader_menu_mix_cards" />
+    <item
+        android:icon="@drawable/icon_show_qr_code"
+        android:title="@string/fragment_leader_menu_show_qr_code" />
+</menu>

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_createGameFragment"
             app:destination="@id/createGameFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -28,13 +31,18 @@
         android:label="CreateGameFragment"
         tools:layout="@layout/fragment_create_game">
         <action
-            android:id="@+id/action_createGameFragment_to_playerFragment"
-            app:destination="@id/playerFragment" />
+            android:id="@+id/action_createGameFragment_to_leaderFragment"
+            app:destination="@id/leaderFragment" />
     </fragment>
     <fragment
         android:id="@+id/playerFragment"
         android:name="com.corylab.hinthunt.PlayerFragment"
         android:label="PlayerFragment"
         tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/leaderFragment"
+        android:name="com.corylab.hinthunt.LeaderFragment"
+        android:label="LeaderFragment"
+        tools:layout="@layout/fragment_leader"/>
 
 </navigation>

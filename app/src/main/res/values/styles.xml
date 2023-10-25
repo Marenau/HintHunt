@@ -73,5 +73,6 @@
         <item name="itemIconTint">@color/white</item>
         <item name="itemRippleColor">@color/white</item>
         <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
     </style>
 </resources>

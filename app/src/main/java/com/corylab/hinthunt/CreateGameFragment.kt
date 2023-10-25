@@ -142,7 +142,7 @@ class CreateGameFragment : Fragment() {
 
         background = null
 
-        binding.createBtn.setOnClickListener { findNavController().navigate(R.id.action_createGameFragment_to_playerFragment) }
+        binding.createBtn.setOnClickListener { findNavController().navigate(R.id.action_createGameFragment_to_leaderFragment) }
     }
 
     private fun createButtonBackground(firstColor: Int, secondColor: Int): GradientDrawable {

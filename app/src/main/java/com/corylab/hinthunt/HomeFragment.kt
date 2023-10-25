@@ -31,5 +31,6 @@ class HomeFragment : Fragment() {
     private fun init() {
         binding.settingsBtn.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_settingsFragment) }
         binding.createGameBtn.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_createGameFragment) }
+        binding.connectGameBtn.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_playerFragment) }
     }
 }
