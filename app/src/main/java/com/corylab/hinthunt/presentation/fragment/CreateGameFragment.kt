@@ -1,4 +1,4 @@
-package com.corylab.hinthunt
+package com.corylab.hinthunt.presentation.fragment
 
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -7,13 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.corylab.hinthunt.R
 import com.corylab.hinthunt.databinding.FragmentCreateGameBinding
-import com.google.android.material.button.MaterialButton
+import com.corylab.hinthunt.presentation.viewmodel.SharedPreferencesViewModel
 
 class CreateGameFragment : Fragment() {
     private var _binding: FragmentCreateGameBinding? = null
     private val binding get() = _binding!!
+    private val container: Array<Int> = arrayOf(18, 1, 1)
+    private val sharedPreferencesViewModel: SharedPreferencesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,43 +32,54 @@ class CreateGameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-
     }
 
     private fun init() {
 
+        binding.size18Btn.isChecked = true
+
         binding.size18Btn.setOnClickListener {
             binding.size21Btn.isChecked = false
             binding.size24Btn.isChecked = false
+            container[0] = 18
         }
 
         binding.size21Btn.setOnClickListener {
             binding.size18Btn.isChecked = false
             binding.size24Btn.isChecked = false
+            container[0] = 21
         }
 
         binding.size24Btn.setOnClickListener {
             binding.size18Btn.isChecked = false
             binding.size21Btn.isChecked = false
+            container[0] = 24
         }
+
+        binding.oneStarBtn.isChecked = true
 
         binding.oneStarBtn.setOnClickListener {
             binding.twoStarBtn.isChecked = false
             binding.threeStarBtn.isChecked = false
+            container[1] = 1
         }
 
         binding.twoStarBtn.setOnClickListener {
             binding.oneStarBtn.isChecked = false
             binding.threeStarBtn.isChecked = false
+            container[1] = 2
         }
 
         binding.threeStarBtn.setOnClickListener {
             binding.oneStarBtn.isChecked = false
             binding.twoStarBtn.isChecked = false
+            container[1] = 3
         }
 
         var background: GradientDrawable? = createButtonBackground(0XFFFF5E5B.toInt(), 0XFF58A6CB.toInt())
+        background!!.setStroke(5, Color.WHITE)
         binding.wildBerriesBtn.background = background
+        binding.wildBerriesBtn.isChecked = true
 
         binding.wildBerriesBtn.setOnClickListener {
             var background: GradientDrawable? = createButtonBackground(0XFFFF5E5B.toInt(), 0XFF58A6CB.toInt())
@@ -73,6 +89,7 @@ class CreateGameFragment : Fragment() {
             }
             binding.wildBerriesBtn.background = background
             background = null
+            container[2] = 1
         }
 
         background = createButtonBackground(0XFF61AD6E.toInt(), 0XFFFF8D45.toInt())
@@ -86,6 +103,7 @@ class CreateGameFragment : Fragment() {
             }
             binding.carrotFreshnessBtn.background = background
             background = null
+            container[2] = 2
         }
 
         background = createButtonBackground(0XFFB4A414.toInt(), 0XFF27ABA9.toInt())
@@ -99,6 +117,7 @@ class CreateGameFragment : Fragment() {
             }
             binding.mustardFieldBtn.background = background
             background = null
+            container[2] = 3
         }
 
         background = createButtonBackground(0XFF56599E.toInt(), 0XFFCF8A8A.toInt())
@@ -112,6 +131,7 @@ class CreateGameFragment : Fragment() {
             }
             binding.nobleSaffronBtn.background = background
             background = null
+            container[2] = 4
         }
 
         background = createButtonBackground(0XFF7C3E73.toInt(), 0XFF476EBC.toInt())
@@ -125,6 +145,7 @@ class CreateGameFragment : Fragment() {
             }
             binding.lilacAtMidnightBtn.background = background
             background = null
+            container[2] = 5
         }
 
         background = createButtonBackground(0XFF356F40.toInt(), 0XFFBC4749.toInt())
@@ -138,11 +159,17 @@ class CreateGameFragment : Fragment() {
             }
             binding.cranberriesInMossBtn.background = background
             background = null
+            container[2] = 6
         }
 
         background = null
 
-        binding.createBtn.setOnClickListener { findNavController().navigate(R.id.action_createGameFragment_to_leaderFragment) }
+        binding.createBtn.setOnClickListener {
+            sharedPreferencesViewModel.setInt("size", container[0])
+            sharedPreferencesViewModel.setInt("complexity", container[1])
+            sharedPreferencesViewModel.setInt("color_scheme", container[2])
+            findNavController().navigate(R.id.action_createGameFragment_to_leaderFragment) //TODO
+        }
     }
 
     private fun createButtonBackground(firstColor: Int, secondColor: Int): GradientDrawable {

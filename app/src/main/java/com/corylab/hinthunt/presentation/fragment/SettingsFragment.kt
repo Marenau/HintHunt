@@ -1,4 +1,4 @@
-package com.corylab.hinthunt
+package com.corylab.hinthunt.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

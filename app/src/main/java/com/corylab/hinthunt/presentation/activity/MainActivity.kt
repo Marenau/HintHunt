@@ -1,7 +1,8 @@
-package com.corylab.hinthunt
+package com.corylab.hinthunt.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.corylab.hinthunt.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,14 +1,15 @@
-package com.corylab.hinthunt
+package com.corylab.hinthunt.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.corylab.hinthunt.databinding.FragmentLeaderBinding
+import com.corylab.hinthunt.databinding.FragmentPlayerBinding
 
-class LeaderFragment: Fragment() {
-    private var _binding: FragmentLeaderBinding? = null
+class PlayerFragment : Fragment() {
+
+    private var _binding: FragmentPlayerBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -16,7 +17,7 @@ class LeaderFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLeaderBinding.inflate(inflater, container, false)
+        _binding = FragmentPlayerBinding.inflate(inflater, container, false)
         return binding.root
     }
 
